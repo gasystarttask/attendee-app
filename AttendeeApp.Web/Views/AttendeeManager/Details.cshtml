@@ -1,0 +1,35 @@
+﻿@model AttendeeApp.Web.Models.Attendee
+
+@{
+    ViewBag.Title = "attendee details";
+}
+
+<h2>Attendee details</h2>
+
+<div>
+    <dt>
+        @Html.DisplayNameFor(model => model.AttendeeId)
+    </dt>
+    <dd>
+        @Html.DisplayFor(model => model.AttendeeId)
+    </dd>
+
+    <dt>
+        @Html.DisplayNameFor(model => model.Name)
+    </dt>
+    <dd>
+        @Html.DisplayFor(model => model.Name)
+    </dd>
+
+    <dt>
+        @Html.DisplayNameFor(model => model.Email)
+    </dt>
+    <dd>
+        @Html.DisplayFor(model => model.Email)
+    </dd>
+</div>
+
+<p>
+    @Html.ActionLink("Edit", "Edit", new { attendeeid = Model.AttendeeId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

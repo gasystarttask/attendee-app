@@ -1,0 +1,43 @@
+﻿@model AttendeeApp.Web.Models.Attendee
+
+@{
+    ViewBag.Title = "Delete attendee";
+}
+
+<h2>Delete</h2>
+<h3>Are you sure you want to delete this?</h3>
+
+<div>
+    <dt>
+        @Html.DisplayNameFor(model => model.AttendeeId)
+    </dt>
+    <dd>
+        @Html.DisplayFor(model => model.AttendeeId)
+    </dd>
+
+    <dt>
+        @Html.DisplayNameFor(model => model.Name)
+    </dt>
+    <dd>
+        @Html.DisplayFor(model => model.Name)
+    </dd>
+
+    <dt>
+        @Html.DisplayNameFor(model => model.Email)
+    </dt>
+    <dd>
+        @Html.DisplayFor(model => model.Email)
+    </dd>
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+        @Html.HiddenFor(model => model.AttendeeId)
+        @Html.HiddenFor(model => model.Name)
+        @Html.HiddenFor(model => model.Email)
+
+        <div>
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

@@ -1,0 +1,12 @@
+This project gives an example that shows how to implements
+Repository, Unit of Work pattern in .net project.
+
+This projet contains an web app that manage the attendee
+(a person who attends a conference or other gathering)
+
+Setup
+open IIS manager
+create new website
+add host and root direcotry
+add host on hosts file
+give permission to root directory (IIS_IUSERS, IUSERS,...)
